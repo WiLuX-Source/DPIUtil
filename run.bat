@@ -1,0 +1,1 @@
+start %~dp0\goodbyedpi.exe --set-ttl 3 --blacklist blacklist.txt
