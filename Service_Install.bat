@@ -15,7 +15,7 @@ pushd "%CD%"
 CD /D "%~dp0"
 sc stop "GoodbyeDPI"
 sc delete "GoodbyeDPI"
-sc create "GoodbyeDPI" binPath= "\"%CD%\goodbyedpi.exe\" --set-ttl 3 --blacklist \"%CD%\blacklist.txt\" " start= "auto"
+sc create "GoodbyeDPI" binPath= "\"%CD%\goodbyedpi.exe\" --set-ttl 3 --dns-addr 9.9.9.9 --dns-port 9953 --blacklist \"%CD%\blacklist.txt\" " start= "auto"
 sc description "GoodbyeDPI" "Passive Deep Packet Inspection blocker and Active DPI circumvention utility"
 sc start "GoodbyeDPI"
 echo Completed successfully.
